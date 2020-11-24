@@ -1,0 +1,17 @@
+[
+  {
+    "gameSelected": "Pokemon",
+    "playerName": "Ace",
+    "score": 300
+  },
+  {
+    "gameSelected": "Evil Within",
+    "playerName": "Ace",
+    "score": 3000
+  },
+  {
+    "gameSelected": "Resident Evil 2",
+    "playerName": "Ace",
+    "score": 7000
+  }
+]

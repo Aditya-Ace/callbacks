@@ -1,0 +1,17 @@
+[
+  {
+    "gameSelected": "Doom",
+    "playerName": "Aditya",
+    "score": 100
+  },
+  {
+    "gameSelected": "Tomb Raider",
+    "playerName": "Aditya",
+    "score": 2000
+  },
+  {
+    "gameSelected": "Resident Evil",
+    "playerName": "Aditya",
+    "score": 5000
+  }
+]

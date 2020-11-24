@@ -1,19 +1,32 @@
 /** @format */
 
-const getTodos = (callback) => {
+const getTodos = (resource, callback) => {
   const request = new XMLHttpRequest();
   request.addEventListener('readystatechange', () => {
     if (request.readyState === 4 && request.status === 200) {
-      callback(undefined, request.responseText);
+      const data = JSON.parse(request.responseText);
+      callback(undefined, data);
     } else if (request.readyState === 4) {
       callback('could not fetch the data', undefined);
     }
   });
-  request.open('GET', 'https://jsonplaceholder.typicode.com/todos');
+  // request.open('GET', 'https://jsonplaceholder.typicode.com/todos');
+  request.open('GET', resource);
   request.send();
 };
 
-getTodos((err, data) => {
+//Call Back Hell Situation or Triangle of Doom
+getTodos('gameCenter/ace.json', (err, data) => {
   if (err) console.log(err);
   if (data) console.log(data);
+  getTodos('gameCenter/aditya.json', (err, data) => {
+    if (err) console.log(err);
+    if (data) console.log(data);
+    getTodos('gameCenter/ancientApple.json', (err, data) => {
+      if (err) console.log(err);
+      if (data) console.log(data);
+    });
+  });
 });
+
+//Better way
